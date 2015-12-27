@@ -1,0 +1,8 @@
+#!/bin/sh
+
+WWW_PATH="/var/www/test"
+
+SCRIPT_PATH=$(readlink -f "$0")
+BASE_PATH=$(dirname "$SCRIPT_PATH")
+TEST_PATH="$BASE_PATH"/test
+sudo ln -s "$TEST_PATH" "$WWW_PATH"
